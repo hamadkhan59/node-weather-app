@@ -4,7 +4,7 @@ const express = require("express");
 const hbs = require("hbs");
 
 const app = express();
-const Forcast = require("../Utils/forcast");
+const Forcast = require("../Utils/Forcast");
 const forcast = new Forcast();
 
 const publicDirectoryPath = path.join(__dirname, "../public");
