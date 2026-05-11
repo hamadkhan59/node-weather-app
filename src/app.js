@@ -4,6 +4,8 @@ const express = require("express");
 const hbs = require("hbs");
 
 const app = express();
+const port = process.env.PORT || 3000
+
 const Forcast = require("../Utils/Forcast");
 const forcast = new Forcast();
 
@@ -61,6 +63,6 @@ app.get("/:anything", (req, res) => {
   res.status(404).render("notfound");
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server is started");
 });
